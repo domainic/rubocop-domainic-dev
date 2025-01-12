@@ -1,0 +1,10 @@
+inherit_from: ./ruby-3.1.yml
+
+require:
+  - rubocop-domainic-dev
+  - rubocop-on-rbs
+  - rubocop-ordered_methods
+  - rubocop-yard
+
+RBS:
+  Enabled: true

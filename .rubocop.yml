@@ -1,0 +1,8 @@
+inherit_from:
+  - ./config/rubocop/domainic.yml
+
+Naming/FileName:
+  inherit_mode:
+    Exclude: merge
+  Exclude:
+    - '**/rubocop-*'

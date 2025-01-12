@@ -1,0 +1,145 @@
+# Generated from lib/rubocop/domainic/dev/ast/method_node_wrapper.rb with RBS::Inline
+
+module RuboCop
+  module Domainic
+    module Dev
+      module AST
+        # A wrapper for method RuboCop::AST::Nodes
+        #
+        # @author {https://aaronmallen.me Aaron Allen}
+        # @since 0.2.0
+        #
+        # @api private
+        class MethodNodeWrapper < NodeWrapper
+          # Get the list of param names from the method arguments
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Array<String>] the param names
+          # @rbs () -> Array[String]
+          def param_names: () -> Array[String]
+
+          # Check if the method is private
+          #
+          # A method is considered private if:
+          # - It has private visibility in Ruby code OR
+          # - It has @api private, @!visibility private, or @private in its documentation
+          # UNLESS
+          # - It has an @api public tag which overrides other visibility indicators
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Boolean] true if the method is private
+          # @rbs () -> bool
+          def private?: () -> bool
+
+          # Check if the method is protected
+          #
+          # A method is considered protected if:
+          # - It has protected visibility in Ruby code OR
+          # - It has a @!visibility protected tag in its documentation
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Boolean] true if the method is protected
+          # @rbs () -> bool
+          def protected?: () -> bool
+
+          # Check if the method is public
+          #
+          # A method is considered public if:
+          # - It has default public visibility in Ruby code AND
+          # - It does not have any documentation tags indicating private visibility
+          # OR
+          # - It has an @api public tag in its documentation
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Boolean] true if the method is public
+          # @rbs () -> bool
+          def public?: () -> bool
+
+          # Check if the method raises an error
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Boolean] `true` if the method raises an error, `false` otherwise
+          # @rbs () -> bool
+          def raises?: () -> bool
+
+          # Check if the method yields
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Boolean] `true` if the method yields, `false` otherwise
+          # @rbs () -> bool
+          def yields?: () -> bool
+
+          private
+
+          # Get the API visibility from the documentation
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [String, nil] the API visibility or nil if not specified
+          # @rbs () -> String?
+          def api_visibility: () -> String?
+
+          # Check if the method is marked as private in its documentation
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Boolean] true if the method is marked as private in docs
+          # @rbs () -> bool
+          def private_from_docs?: () -> bool
+
+          # Get the method's Ruby visibility by checking for the last visibility modifier
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [Symbol] :public, :protected, or :private
+          # @rbs () -> Symbol
+          def ruby_visibility: () -> Symbol
+
+          # Get the visibility from @!visibility tag
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @return [String, nil] the visibility or nil if not specified
+          # @rbs () -> String?
+          def visibility_tag: () -> String?
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,68 @@
+RSpec/ItIsExpected:
+  Description: 'Checks the it block descriptions begin with "is expected"'
+  Enabled: true
+  VersionAdded: '0.0.1'
+
+Style/Documentation:
+  Enabled: false
+
+YARD/Description:
+  Description: 'Checks that YARD docs begin with descriptive text'
+  Enabled: true
+  Include:
+    - '**/*.rb'
+  VersionAdded: '0.0.1'
+
+YARD/Documentation:
+  Attribute: true
+  Class: true
+  Constant: true
+  Description: 'Check that classes, constants, methods, and modules have YARD documentation'
+  Enabled: true
+  Include:
+    - '**/*.rb'
+  Method: true
+  Module: true
+  VersionAdded: '0.0.1'
+
+YARD/NoPeriod:
+  Description: 'Checks that YARD docstrings do not end in a needless period'
+  Enabled: true
+  Include:
+    - '**/*.rb'
+  VersionAdded: '0.0.1'
+
+YARD/RequiredTags:
+  Description: 'Checks that classes, constants, methods and modules have the required YARD tags'
+  Enabled: true
+  Include:
+    - '**/*.rb'
+  RequireExampleOnPublicMethods: true
+  RequireParams: true
+  RequireRaise: true
+  RequireYield: true
+  RequiredTags:
+    Attribute:
+      - api
+      - author
+      - return
+      - since
+    Class:
+      - api
+      - author
+      - since
+    Constant:
+      - api
+      - author
+      - return
+      - since
+    Method:
+      - api
+      - author
+      - return
+      - since
+    Module:
+      - api
+      - author
+      - since
+  VersionAdded: '0.0.1'

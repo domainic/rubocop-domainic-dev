@@ -1,0 +1,157 @@
+# Generated from lib/rubocop/cop/domainic/dev/yard/documentation.rb with RBS::Inline
+
+module RuboCop
+  module Cop
+    module Domainic
+      module Dev
+        module YARD
+          # This cop ensures that all classes, constants, methods, and modules have YARD documentation
+          # It enforces basic documentation presence across the codebase by checking for non-empty
+          # yard_docstrings on all major code elements
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @example
+          #   # bad
+          #   class MyClass
+          #   end
+          #
+          #   # good
+          #   # A class that does something.
+          #   class MyClass
+          #   end
+          #
+          # @example
+          #   # bad
+          #   CONSTANT = "value"
+          #
+          #   # good
+          #   # A constant that holds a value
+          #   CONSTANT = "value"
+          #
+          # @example
+          #   # bad
+          #   def my_method
+          #   end
+          #
+          #   # good
+          #   # A method that does something.
+          #   def my_method
+          #   end
+          #
+          # @example
+          #   # bad
+          #   module MyModule
+          #   end
+          #
+          #   # good
+          #   # A module that provides functionality
+          #   module MyModule
+          #   end
+          class Documentation < Base
+            # The Error message used for offenses
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @return [String] the error message
+            MSG: String
+
+            # The constant assignment hook
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_casgn: (untyped node) -> void
+
+            # The class hook
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::AST::Node] the class node
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_class: (untyped node) -> void
+
+            # The method def hook
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::AST::Node] the method node
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_def: (untyped node) -> void
+
+            alias on_defs on_def
+
+            # The module hook
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::AST::Node] the module node
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_module: (untyped node) -> void
+
+            # The method send hook
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::AST::Node] the method node
+            #
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_send: (untyped node) -> void
+
+            private
+
+            # Identity a class or module node by its ancestors
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::Domainic::Dev::AST::Node] the node to check
+            # @return [String] the identifier
+            # @rbs (untyped node) -> String
+            def identifier: (untyped node) -> String
+
+            # Qualify the class or module name
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::Domainic::Dev::AST::Node] the node to check
+            # @return [Array<String>, String, nil] the qualified constant
+            # @rbs (untyped node) -> (String | Array[String])?
+            def qualify_const: (untyped node) -> (String | Array[String])?
+          end
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,53 @@
+# Generated from lib/rubocop/cop/domainic/dev/rspec/it_is_expected.rb with RBS::Inline
+
+module RuboCop
+  module Cop
+    module Domainic
+      module Dev
+        module RSpec
+          # This cop ensures that `it` blocks in RSpec examples begin with "is expected" in their descriptions
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @example
+          #   # bad
+          #   it "returns a String" do
+          #     expect(my_method).to be_a(String)
+          #   end
+          #
+          #   # good
+          #   it "is expected to return a String" do
+          #     expect(my_method).to be_a(String)
+          #   end
+          class ItIsExpected < Base
+            # The Error message used for offenses
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @return [String] the error message
+            MSG: String
+
+            def it_with_description?: (untyped node) -> String?
+
+            # The RuboCop on send hook
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_send: (untyped node) -> void
+          end
+        end
+      end
+    end
+  end
+end

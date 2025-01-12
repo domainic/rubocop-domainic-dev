@@ -1,0 +1,9 @@
+lib/**/*.rb
+--title Rubocop::Domainic::Dev
+--readme README.md
+--no-private
+--protected
+--markup markdown
+--markup-provider redcarpet
+--embed-mixins
+--files LICENSE

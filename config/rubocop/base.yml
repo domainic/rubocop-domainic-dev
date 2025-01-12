@@ -1,0 +1,37 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - vendor/**/*
+  NewCops: enable
+
+Layout/LeadingCommentSpace:
+  AllowRBSInlineAnnotation: true
+
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+
+Naming/FileName:
+  Exclude:
+    - '**/domainic-*'
+
+RSpec/ExampleLength:
+  Max: 15
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+RSpec/NestedGroups:
+  AllowedGroups:
+    - describe
+
+Style/Documentation:
+  AllowedConstants:
+    - Domainic
+

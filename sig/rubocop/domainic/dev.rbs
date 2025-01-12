@@ -1,0 +1,44 @@
+# Generated from lib/rubocop/domainic/dev.rb with RBS::Inline
+
+module RuboCop
+  module Domainic
+    # Domainic Dev RuboCop
+    #
+    # @author {https://aaronmallen.me Aaron Allen}
+    # @since 0.2.0
+    #
+    # @api private
+    module Dev
+      # The project root path
+      #
+      # @author {https://aaronmallen.me Aaron Allen}
+      # @since 0.2.0
+      #
+      # @api private
+      #
+      # @return [Pathname] the project root path
+      PROJECT_ROOT: Pathname
+
+      # The default configuration file for Domainic RuboCop cops
+      #
+      # @author {https://aaronmallen.me Aaron Allen}
+      # @since 0.2.0
+      #
+      # @api private
+      #
+      # @return [Pathname] the configuration file path
+      CONFIG_DEFAULT: Pathname
+
+      # Inject the Domainic Cop defaults
+      #
+      # @author {https://aaronmallen.me Aaron Allen}
+      # @since 0.2.0
+      #
+      # @api private
+      #
+      # @return [void]
+      # @rbs () -> void
+      def self.inject_configuration_defaults!: () -> void
+    end
+  end
+end

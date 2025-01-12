@@ -1,0 +1,238 @@
+# Generated from lib/rubocop/cop/domainic/dev/yard/config/required_tags.rb with RBS::Inline
+
+module RuboCop
+  module Cop
+    module Domainic
+      module Dev
+        module YARD
+          module Config
+            # The configuration object for the RSpec/RequiredTags cop
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            class RequiredTags
+              # Initialize a new instance of RequiredTagsConfig
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param cop_config [Hash{String => Object}] the default cop configuration
+              #
+              # @return [RequiredTagConfig] the new instance of RequiredTagsConfig
+              # @rbs (Hash[String, untyped] cop_config) -> void
+              def initialize: (Hash[String, untyped] cop_config) -> void
+
+              # Check if a class is excluded from the cop
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param class_name [String] the class name to check
+              #
+              # @return [Boolean] `true` if the class is excluded, `false` otherwise
+              # @rbs (String class_name) -> bool
+              def class_excluded?: (String class_name) -> bool
+
+              # Check if a constant is excluded from the cop
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param constant_name [String] the constant name to check
+              #
+              # @return [Boolean] `true` if the constant is excluded, `false` otherwise
+              # @rbs (String constant_name) -> bool
+              def constant_excluded?: (String constant_name) -> bool
+
+              # Check if a method is excluded from the cop
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param method_name [String] the method name to check
+              #
+              # @return [Boolean] `true` if the method is excluded, `false` otherwise
+              # @rbs (String method_name) -> bool
+              def method_excluded?: (String method_name) -> bool
+
+              # Check if a module is excluded from the cop
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param module_name [String] the module name to check
+              #
+              # @return [Boolean] `true` if the module is excluded, `false` otherwise
+              # @rbs (String module_name) -> bool
+              def module_excluded?: (String module_name) -> bool
+
+              # Check if the @example tag is required for public methods
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Boolean] `true` if the @example tag is required, `false` otherwise
+              # @rbs () -> bool
+              def require_example_tag_on_public_methods?: () -> bool
+
+              # Check if the @param tag is required for methods that take arguments
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Boolean] `true` if the @param tag is required, `false` otherwise
+              # @rbs () -> bool
+              def require_param_tag?: () -> bool
+
+              # Check if the @raise tag is required for methods that raise
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Boolean] `true` if the @raise tag is required, `false` otherwise
+              # @rbs () -> bool
+              def require_raise_tag?: () -> bool
+
+              # Check if the @yield tag is required for methods that yield
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Boolean] `true` if the @yield tag is required, `false` otherwise
+              # @rbs () -> bool
+              def require_yield_tag?: () -> bool
+
+              # Get the list of required attribute tags
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Array<String>] the required tags
+              # @rbs () -> Array[String]
+              def required_attribute_tags: () -> Array[String]
+
+              # Get the list of required class tags
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Array<String>] the required tags
+              # @rbs () -> Array[String]
+              def required_class_tags: () -> Array[String]
+
+              # Get the list of required constant tags
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Array<String>] the required tags
+              # @rbs () -> Array[String]
+              def required_constant_tags: () -> Array[String]
+
+              # Get the list of required method tags
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Array<String>] the required tags
+              # @rbs () -> Array[String]
+              def required_method_tags: () -> Array[String]
+
+              # Get the list of required module tags
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Array<String>] the required tags
+              # @rbs () -> Array[String]
+              def required_module_tags: () -> Array[String]
+
+              private
+
+              # The raw RuboCop configuration
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @return [Hash{String => Object}] the RuboCop configuration
+              attr_reader raw_config: Hash[String, untyped]
+
+              # Fetch a {#raw_config} value or return the default
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param keys [Array<String>] the keys to dig for
+              # @param default [Object] the default value to use if the property is not found
+              #
+              # @return [Object] either the found configuration property or the provided default value
+              # @rbs (*String keys, default: untyped) -> untyped
+              def from_config: (*String keys, default: untyped) -> untyped
+
+              # Delegate missing methods to the raw configuration object
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param method_name [Symbol] the method to delegate
+              #
+              # @return [Object]
+              # @rbs (Symbol method_name, *untyped, **untyped) -> untyped
+              def method_missing: (Symbol method_name, *untyped, **untyped) -> untyped
+
+              # Check if the raw configuration object responds to a method
+              #
+              # @author {https://aaronmallen.me Aaron Allen}
+              # @since 0.2.0
+              #
+              # @api private
+              #
+              # @param method_name [Symbol] the method to check
+              # @param _include_private [Boolean] whether to include private methods in the check
+              #
+              # @return [Boolean] `true` if the configuration object responds to the method, `false` otherwise
+              # @rbs (Symbol method_name, ?bool _include_private) -> bool
+              def respond_to_missing?: (Symbol method_name, ?bool _include_private) -> bool
+            end
+          end
+        end
+      end
+    end
+  end
+end

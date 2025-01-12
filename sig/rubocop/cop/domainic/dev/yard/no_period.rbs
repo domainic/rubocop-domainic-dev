@@ -1,0 +1,205 @@
+# Generated from lib/rubocop/cop/domainic/dev/yard/no_period.rb with RBS::Inline
+
+module RuboCop
+  module Cop
+    module Domainic
+      module Dev
+        module YARD
+          # This cop ensures that YARD docstrings don't end lines with periods
+          # except for ellipsis (...) and code blocks
+          #
+          # @author {https://aaronmallen.me Aaron Allen}
+          # @since 0.2.0
+          #
+          # @api private
+          #
+          # @example
+          #   # bad
+          #   # This is a description.
+          #   #
+          #   # And this is more info.
+          #   class MyClass; end
+          #
+          #   # good
+          #   # This is a description
+          #   #
+          #   # And this is more info
+          #   # with ellipsis...
+          #   #
+          #   # @example
+          #   #   obj.method_name.
+          #   #   something
+          #   class MyClass; end
+          class NoPeriod < Base
+            extend AutoCorrector
+
+            # The Error message used for offenses
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @return [String] the error message
+            MSG: ::String
+
+            # Check nodes for period offenses
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::AST::Node] the node to check
+            #
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_casgn: (untyped node) -> void
+
+            alias on_class on_casgn
+
+            alias on_def on_casgn
+
+            alias on_defs on_casgn
+
+            alias on_module on_casgn
+
+            # The method send hook
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::AST::Node] the method node
+            #
+            # @return [void]
+            # @rbs (untyped node) -> void
+            def on_send: (untyped node) -> void
+
+            private
+
+            # Add a period offense for a comment
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param comment [Parser::Source::Comment] the comment with the offense
+            #
+            # @return [void]
+            # @rbs (Parser::Source::Comment comment) -> void
+            def add_period_offense: (Parser::Source::Comment comment) -> void
+
+            # Check comment lines for period offenses
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param comments [Array<Parser::Source::Comment>] the comments to check
+            #
+            # @return [void]
+            # @rbs (Array[Parser::Source::Comment] comments) -> void
+            def check_docstring_for_periods: (Array[Parser::Source::Comment] comments) -> void
+
+            # Check a node's docstring for period offenses
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param node [RuboCop::Domainic::Dev::AST::NodeWrapper] the node to check
+            #
+            # @return [void]
+            # @rbs (RuboCop::Domainic::Dev::AST::NodeWrapper node) -> void
+            def check_node: (RuboCop::Domainic::Dev::AST::NodeWrapper node) -> void
+
+            # Check if text is a code block delimiter
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param text [String] the text to check
+            #
+            # @return [Boolean] true if the text is a code block delimiter
+            # @rbs (String text) -> bool
+            def code_block_delimiter?: (String text) -> bool
+
+            # Check if the found period is an ellipsis
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param text [String] the text to check
+            #
+            # @return [Boolean] true if the period is part of an ellipsis
+            # @rbs (String text) -> bool
+            def ellipsis?: (String text) -> bool
+
+            # Check if the string ends with a period
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param text [String] the text to check
+            #
+            # @return [Boolean] true if the text ends with a period
+            # @rbs (String text) -> bool
+            def ends_with_period?: (String text) -> bool
+
+            # Check if the text is a line continuation of the previous line
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param text [String] the text to check
+            #
+            # @return [Boolean] `true` if the line is a continuation, `false` otherwise
+            # @rbs (String text) -> bool
+            def line_continuation?: (String text) -> bool
+
+            # Process a single comment and maintain code block state
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param comment [Parser::Source::Comment] the comment to process
+            # @param in_code_block [Boolean] current code block state
+            #
+            # @return [Boolean] new code block state
+            # @rbs (Parser::Source::Comment comment, bool in_code_block) -> bool
+            def process_comment: (Parser::Source::Comment comment, bool in_code_block) -> bool
+
+            # Check if a line should be skipped for period checking
+            #
+            # @author {https://aaronmallen.me Aaron Allen}
+            # @since 0.2.0
+            #
+            # @api private
+            #
+            # @param text [String] the text to check
+            # @param in_code_block [Boolean] whether currently in a code block
+            #
+            # @return [Boolean] true if the line should be skipped
+            # @rbs (String text, bool in_code_block) -> bool
+            def should_skip?: (String text, bool in_code_block) -> bool
+          end
+        end
+      end
+    end
+  end
+end
