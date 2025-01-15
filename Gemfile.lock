@@ -11,7 +11,7 @@ GIT
 PATH
   remote: .
   specs:
-    rubocop-domainic-dev (0.0.1)
+    rubocop-domainic-dev (0.0.2)
       rubocop (~> 1.70)
       rubocop-on-rbs (~> 1.3)
       rubocop-ordered_methods (~> 0.13)

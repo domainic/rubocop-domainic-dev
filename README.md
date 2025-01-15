@@ -16,5 +16,5 @@ standards, along with preset RuboCop configurations that can be inherited by oth
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rubocop-domainic-dev', github: 'domainic/rubocop-domainic-dev', tag: 'v0.0.1'
+gem 'rubocop-domainic-dev', github: 'domainic/rubocop-domainic-dev', tag: '0.0.2'
 ```
