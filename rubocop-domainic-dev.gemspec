@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RUBOCOP_DOMAINIC_DEV_GEM_VERSION = '0.0.1'
-RUBOCOP_DOMAINIC_DEV_SEMVER = '0.0.1'
+RUBOCOP_DOMAINIC_DEV_GEM_VERSION = '0.0.2'
+RUBOCOP_DOMAINIC_DEV_SEMVER = '0.0.2'
 RUBOCOP_DOMAINIC_DEV_REPO_URL = 'https://github.com/domainic/rubocop-domainic-dev'
 RUBOCOP_DOMAINIC_DEV_HOME_URL = 'https://domainic.org'
 

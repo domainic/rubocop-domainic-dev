@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog], and this project adheres to [Break Ve
 
 ## [Unreleased]
 
+## [0.0.2] - 2025-01-15
+
 ### Changed
 
 * [#1](https://github.com/domainic/rubocop-domainic-dev/pull/1) Exclude spec files from the `YARD/Documentation` cop
@@ -19,4 +21,4 @@ The format is based on [Keep a Changelog], and this project adheres to [Break Ve
 
 <!-- versions -->
 
-[Unreleased]: https://github.com/domainic/rubocop-domainic-dev/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/domainic/rubocop-domainic-dev/compare/v0.0.2...HEAD
