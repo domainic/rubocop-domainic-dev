@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog], and this project adheres to [Break Ve
 
 ## [Unreleased]
 
+### Changed
+
+* [#1](https://github.com/domainic/rubocop-domainic-dev/pull/1) Exclude spec files from the `YARD/Documentation` cop
+
 ## 0.0.1 - 2025-01-12
 
 * initial release

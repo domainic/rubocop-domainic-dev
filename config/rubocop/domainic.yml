@@ -8,3 +8,7 @@ require:
 
 RBS:
   Enabled: true
+
+YARD/Documentation:
+  Exclude:
+    - spec/**/*_spec.rb
