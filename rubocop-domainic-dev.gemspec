@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RUBOCOP_DOMAINIC_DEV_GEM_VERSION = '0.0.2'
-RUBOCOP_DOMAINIC_DEV_SEMVER = '0.0.2'
+RUBOCOP_DOMAINIC_DEV_GEM_VERSION = '0.0.3'
+RUBOCOP_DOMAINIC_DEV_SEMVER = '0.0.3'
 RUBOCOP_DOMAINIC_DEV_REPO_URL = 'https://github.com/domainic/rubocop-domainic-dev'
 RUBOCOP_DOMAINIC_DEV_HOME_URL = 'https://domainic.org'
 
@@ -40,6 +40,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rubocop-on-rbs', '~> 1.3'
   spec.add_dependency 'rubocop-ordered_methods', '~> 0.13'
   spec.add_dependency 'rubocop-performance', '~> 1.23'
-  spec.add_dependency 'rubocop-rspec', '~> 3.3'
+  spec.add_dependency 'rubocop-rspec', '~> 3.4'
   spec.add_dependency 'rubocop-yard', '~> 0.10'
 end

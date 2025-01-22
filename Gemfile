@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development, :test do
-  gem 'domainic-dev-test', github: 'domainic/domainic-dev-test', tag: 'v0.0.1'
+  gem 'domainic-dev-test', github: 'domainic/domainic-dev-test', tag: '0.0.1'
 end
 
 group :doc do

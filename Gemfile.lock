@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/domainic/domainic-dev-test.git
   revision: 7f55f84f69d1e83fa054472ee1c89fa088a8a369
-  tag: v0.0.1
+  tag: 0.0.1
   specs:
     domainic-dev-test (0.0.1)
       rspec (~> 3)
@@ -11,12 +11,12 @@ GIT
 PATH
   remote: .
   specs:
-    rubocop-domainic-dev (0.0.2)
+    rubocop-domainic-dev (0.0.3)
       rubocop (~> 1.70)
       rubocop-on-rbs (~> 1.3)
       rubocop-ordered_methods (~> 0.13)
       rubocop-performance (~> 1.23)
-      rubocop-rspec (~> 3.3)
+      rubocop-rspec (~> 3.4)
       rubocop-yard (~> 0.10)
 
 GEM
@@ -38,7 +38,7 @@ GEM
     base64 (0.2.0)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
-    concurrent-ruby (1.3.4)
+    concurrent-ruby (1.3.5)
     connection_pool (2.5.0)
     csv (3.3.2)
     diff-lcs (1.5.1)
@@ -57,7 +57,7 @@ GEM
     ffi (1.17.1-x86_64-linux-musl)
     fileutils (1.7.3)
     github-markup (5.0.1)
-    i18n (1.14.6)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     json (2.9.1)
     language_server-protocol (3.17.0.3)
@@ -67,7 +67,7 @@ GEM
     logger (1.6.5)
     minitest (5.25.4)
     parallel (1.26.3)
-    parser (3.3.6.0)
+    parser (3.3.7.0)
       ast (~> 2.4.1)
       racc
     prism (1.2.0)
@@ -117,7 +117,7 @@ GEM
     rubocop-performance (1.23.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rspec (3.3.0)
+    rubocop-rspec (3.4.0)
       rubocop (~> 1.61)
     rubocop-yard (0.10.0)
       rubocop (~> 1.21)
